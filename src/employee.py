@@ -15,7 +15,8 @@ def read_employee_data(data):
     quoting: An integer constant representing the CSV quoting style.
     engine: The parsing engine to use.
 
-    After reading the CSV data, we replace any spaces in the column names with underscores using the str.replace method on the columns attribute of the DataFrame.
+    After reading the CSV data, we replace any spaces in the column names with underscores using the str.replace method
+    on the columns attribute of the DataFrame.
 
     :param data: A string representing the file path or a file-like object of the CSV data.
     :return: A pandas DataFrame containing the employee data.
