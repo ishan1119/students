@@ -2,7 +2,9 @@
 
 > ### Technical Specs:
 
-- [MySQL Workbench](https://www.mysql.com/products/workbench/) for MySQL DB
+- [MySQL Workbench](https://www.mysql.com/products/workbench/) for MySQL DB 
+- or
+- ![PyCharm MySQL Connection](https://github.com/arturogonzalezm/students/blob/main/images/mysql_pycharm.png?raw=true)
 - [PyCharm](https://www.jetbrains.com/pycharm/nextversion/) for Python
 
 > ### Execution Instructions:
