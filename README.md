@@ -2,8 +2,8 @@
 
 > ### Technical Specs:
 
-- PyCharm or any editor/IDE that supports Python programming language
-- MySQL workbench for MySQL 
+- [MySQL Workbench](https://www.mysql.com/products/workbench/) for MySQL DB
+- [PyCharm](https://www.jetbrains.com/pycharm/nextversion/) for Python
 
 > ### Execution Instructions:
 1. Run main.py to see output

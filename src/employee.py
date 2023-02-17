@@ -23,12 +23,13 @@ def read_employee_data(data):
     """
 
     # Read employee data from a CSV file using pandas' read_csv function
-    employee_df = pd.read_csv(filepath_or_buffer=data, quotechar='"', header=0, sep=',\s*', skipinitialspace=True,
-                              quoting=csv.QUOTE_ALL, engine='python')
+    employee_df = pd.read_csv(filepath_or_buffer=data, header=0, sep='|', index_col=False, quoting=csv.QUOTE_NONE)
     # Replace any spaces in the column names with underscores for consistency and ease of use
-    # as a best practice for column names
+    # Also having spaces in column names is a bad DB practice and may throw errors for future steps
     employee_df.columns = employee_df.columns.str.replace(' ', '_')
-    return employee_df
+    # Remove double quotes in order to have clean data in MySQL DB
+    remove_quotes_df = employee_df.apply(lambda s: s.str.replace('"', ""))
+    return remove_quotes_df
 
 
 def write_employee_data(data):
