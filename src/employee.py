@@ -14,6 +14,7 @@ def read_employee_data(data):
     skipinitialspace: A boolean value indicating whether to skip leading spaces in the fields.
     quoting: An integer constant representing the CSV quoting style.
     engine: The parsing engine to use.
+
     After reading the CSV data, we replace any spaces in the column names with underscores using the str.replace method on the columns attribute of the DataFrame.
 
     :param data: A string representing the file path or a file-like object of the CSV data.
