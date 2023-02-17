@@ -20,8 +20,12 @@ def read_employee_data(data):
     :param data: A string representing the file path or a file-like object of the CSV data.
     :return: A pandas DataFrame containing the employee data.
     """
+
+    # Read employee data from a CSV file using pandas' read_csv function
     employee_df = pd.read_csv(filepath_or_buffer=data, quotechar='"', header=0, sep=',\s*', skipinitialspace=True,
                               quoting=csv.QUOTE_ALL, engine='python')
+    # Replace any spaces in the column names with underscores for consistency and ease of use
+    # as a best practice for column names
     employee_df.columns = employee_df.columns.str.replace(' ', '_')
     return employee_df
 
