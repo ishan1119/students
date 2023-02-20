@@ -1,0 +1,15 @@
+import pandas as pd
+import csv
+import os
+
+
+enrollment_path = os.path.abspath("Enrollment_Data_LMS.csv")
+
+enrollment_df = pd.read_csv(filepath_or_buffer = enrollment_path, header=0, sep='|', quoting=csv.QUOTE_NONE)
+
+
+enrollment_df.columns = enrollment_df.columns.str.replace(' ', '_')
+enrollment_df.columns = enrollment_df.columns.str.replace('"', '')
+
+enrollment_clean_data_df = enrollment_df.apply(lambda s:s.str.replace('"', ''))
+print(enrollment_clean_data_df)
